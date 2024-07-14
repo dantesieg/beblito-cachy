@@ -51,6 +51,10 @@ RUN rpm-ostree override remove \
         sdbus-cpp && \
     ostree container commit
 
+RUN ls -l /var && \
+    ls -l /tmp && \
+    ostree container commit
+
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
