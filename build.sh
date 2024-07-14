@@ -31,7 +31,7 @@ rpm-ostree install \
     /tmp/akmods-rpms/kmod-nvidia-*.rpm
 
 # Extract and format the qualified kernel version
-QUALIFIED_KERNEL="$(rpm -qa | grep -P 'kernel-cachy-(\d+\.\d+\.\d+)' | sed -E 's/kernel-cachy-//')"
+QUALIFIED_KERNEL="$(rpm -qa | grep -P 'kernel-cachyos-(\d+\.\d+\.\d+)' | sed -E 's/kernel-cachyos-//')"
 
 # Generate initramfs image
 /usr/libexec/rpm-ostree/wrapped/dracut --strip --aggressive-strip --no-hostonly --kver "$QUALIFIED_KERNEL" --reproducible -v --add ostree -f "/lib/modules/$QUALIFIED_KERNEL/initramfs.img"
