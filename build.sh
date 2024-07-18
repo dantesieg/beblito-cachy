@@ -17,8 +17,6 @@ sed -i '/^PRETTY_NAME/s/Kinoite/beblito-cachy/' /usr/lib/os-release
 rpm-ostree install dnf5 binutils lz4
 dnf5 upgrade -y
 
-wget https://download.copr.fedorainfracloud.org/results/gloriouseggroll/nobara-40/fedora-40-x86_64/07678635-kde-rounded-corners/kde-rounded-corners-0.6.6-4.fc40.x86_64.rpm
-
 # Install Nvidia drivers and related packages
 rpm-ostree install \
     libva-nvidia-driver \
@@ -30,7 +28,6 @@ rpm-ostree install \
     nvidia-modprobe \
     nvidia-persistenced \
     nvidia-settings \
-    kde-rounded-corners-0.6.6-4.fc40.x86_64.rpm \
     /tmp/akmods-rpms/kmod-nvidia-*.rpm
 
 # Extract and format the qualified kernel version
