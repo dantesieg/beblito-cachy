@@ -54,8 +54,8 @@ RUN rpm-ostree override remove \
         sdbus-cpp && \
     ostree container commit
 
-RUN ls -lah /var && \
-    ls -lah /tmp && \
+RUN rm -rf /var/* && \
+    rm -rf /tmp/* && \
     ostree container commit
 
 ## NOTES:
