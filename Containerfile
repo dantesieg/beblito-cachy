@@ -15,7 +15,7 @@ RUN curl -Lo /usr/bin/copr https://raw.githubusercontent.com/ublue-os/COPR-comma
     curl -Lo /etc/yum.repos.d/tigro-better_fonts-fedora-40.repo \
         https://copr.fedorainfracloud.org/coprs/tigro/better_fonts/repo/fedora-40/tigro-better_fonts-fedora-40.repo && \
     curl -L https://negativo17.org/repos/fedora-nvidia.repo -o /etc/yum.repos.d/fedora-nvidia.repo && \
-    curl -L https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-40/lukenukem-asus-linux-fedora-40.repo && \
+    curl -L https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-40/lukenukem-asus-linux-fedora-40.repo -o /etc/yum.repos.d/lukenukem-asus-linux-fedora-40.repo && \
     ostree container commit
 
 RUN rpm-ostree cliwrap install-to-root /
