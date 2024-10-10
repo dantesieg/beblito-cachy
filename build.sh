@@ -37,5 +37,7 @@ QUALIFIED_KERNEL="$(rpm -qa | grep -P 'kernel-cachyos-(\d+\.\d+\.\d+)' | sed -E 
 /usr/libexec/rpm-ostree/wrapped/dracut --strip --aggressive-strip --no-hostonly --kver "$QUALIFIED_KERNEL" --reproducible -v --add ostree -f "/lib/modules/$QUALIFIED_KERNEL/initramfs.img"
 chmod 0600 "/lib/modules/$QUALIFIED_KERNEL/initramfs.img"
 
+#
+
 # Check for installed Nvidia kernel module
 rpm -qa | grep nvidia-kmod
