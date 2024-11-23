@@ -3,7 +3,7 @@
 ARG IMAGE_NAME="beblito-cachy"
 
 
-FROM quay.io/fedora-ostree-desktops/kinoite:41
+FROM quay.io/fedora-ostree-desktops/kinoite:40
 
 
 COPY system_files /
